@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #07070b;
+  --color-bg-soft: #0d0d15;
+  --color-ink: #f4f1ea;
+  --color-muted: #8a8a99;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-violet: #7c5cff;
+  --color-cyan: #3ad6ff;
+  --color-lime: #c6ff3a;
+  --color-coral: #ff6a4d;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html{
+  scroll-behavior: smooth;
+  background:var(--color-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body{ 
+  color:var(--color-ink);
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-lime);
+  color:  #000;
+}
+
+.aurora {
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  filter: blur(90px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  animation: float 18s ease-in-out infinite;
+}
+
+.blob.b1 {
+  width: 48vw;
+  height: 48vw;
+  background: var(--color-violet);
+  top: -10%;
+  left: -5%;
+}
+
+.blob.b2 {
+  width: 42vw;
+  height: 42vw;
+  background: var(--color-cyan);
+  top: 20%;
+  right: -10%;
+  animation-delay: -6s;
+}
+
+.blob.b3 {
+  width: 38vw;
+  height: 38vw;
+  background: var(--color-coral);
+  bottom: -15%;
+  left: 25%;
+  animation-delay: -11s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(6%, 8%) scale(1.1);
+  }
+  66% {
+    transform: translate(-5%, -6%) scale(0.95);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
