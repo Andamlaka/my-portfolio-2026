@@ -92,3 +92,39 @@ body{
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+
+.marquee {
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  padding: 22px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 40px;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: scrollx 22s linear infinite;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 38px;
+  font-style: italic;
+}
+
+.marquee-track span {
+  margin: 0 26px;
+  color: var(--color-muted);
+}
+
+.marquee-track span b {
+  color: var(--color-ink);
+  font-style: normal;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 600;
+}
+
+@keyframes scrollx {
+  to {
+    transform: translateX(-50%);
+  }
+}
