@@ -7,7 +7,7 @@ export default function Nav() {
       <div className="font-bold text-xl tracking-[-0.5px]">
         andar<span className="text-lime">.</span>dev
       </div>
-      <div className="flex gap-7 text-sm">
+      <div className="hidden gap-7 text-sm sm:flex">
         <a href="#work" className={linkClass}>Work</a>
         <a href="#about" className={linkClass}>About</a>
         <a href="#stack" className={linkClass}>Stack</a>
