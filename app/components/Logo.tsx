@@ -6,30 +6,31 @@ export default function Logo() {
       aria-label="Andargachew Ewawey — home"
     >
       <svg
-        width="34"
-        height="31"
-        viewBox="0 0 88 80"
+        width="42"
+        height="36"
+        viewBox="0 0 112 96"
         fill="none"
         className="text-lime"
         aria-hidden="true"
       >
         <g
+          transform="translate(18 4) skewX(-12)"
           stroke="currentColor"
-          strokeWidth="13"
+          strokeWidth="14"
           strokeLinejoin="miter"
           strokeLinecap="square"
         >
-          {/* A — diagonal up to the shared spine + crossbar */}
-          <path d="M5 75 L36 5" />
-          <path d="M36 5 L36 75" />
-          <path d="M18 49 L36 49" />
-          {/* E — three bars branching off the shared spine */}
-          <path d="M36 5 L72 5" />
-          <path d="M36 40 L66 40" />
-          <path d="M36 75 L72 75" />
+          {/* A — bold chevron + crossbar */}
+          <path d="M6 80 L30 8 L54 80" />
+          <path d="M16 54 L44 54" />
+          {/* E — tucked tight against the A */}
+          <path d="M52 8 L52 80" />
+          <path d="M52 8 L82 8" />
+          <path d="M52 42 L78 42" />
+          <path d="M52 80 L82 80" />
         </g>
       </svg>
-      <span className="text-[22px] font-extrabold tracking-[-1px] [font-family:var(--font-syne)]">
+      <span className="text-[22px] font-extrabold tracking-[-0.5px] [font-family:var(--font-syne)]">
         Andargachew<span className="text-lime">.</span>
       </span>
     </a>
