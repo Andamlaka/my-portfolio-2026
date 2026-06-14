@@ -7,46 +7,50 @@ const projects: Project[] = [
     tag: "Multilingual News · Full-Stack",
     title: "The Pitch Feed",
     desc: "A news platform that delivers every story in the reader's own language — pick any language and get the same news tailored to it, served through a fast Fastify API on Supabase.",
-    stack: ["React", "Fastify", "Node", "Supabase"],
+    stack: ["React", "Fastify", "Node", "Supabase", "REST API"],
     href: "https://thepitchfeed.com/",
+    image: "/thepitchfeed.jpg",
     accent: "#7c5cff",
-    featured: true,
   },
   {
     num: "02",
-    tag: "Sports Media · Full-Stack",
-    title: "Fodbold iTV",
-    desc: "A football TV guide for Scandinavian fans in Danish, Swedish and Norwegian — aggregating fixtures and broadcast schedules so they always know where to watch each match.",
-    stack: ["React", "Node", "Turso"],
-    href: "https://fodbolditv.dk/",
-    accent: "#3ad6ff",
-  },
-  {
-    num: "03",
     tag: "Fintech · Backend",
     title: "IM-AAM",
     desc: "Backend and automation for an AI-powered stock-analysis platform — Python scrapers, scheduled data pipelines and Google API integrations feeding live market insights.",
     stack: ["Python", "Django", "Scraping", "Google API"],
     href: "https://im-aam.com/",
+    image: "/imm.jpg",
     accent: "#c6ff3a",
   },
   {
+    num: "03",
+    tag: "E-commerce · Personal",
+    title: "Amazon Clone",
+    desc: "A self-built storefront recreating Amazon's shopping flow — product browsing, cart and Stripe checkout — built to sharpen my React fundamentals.",
+    stack: ["React", "Stripe", "REST API"],
+    href: "https://amazon-clone-ande.vercel.app/",
+    image: "/amazon.jpg",
+    accent: "#7c5cff",
+  },
+  {
     num: "04",
-    tag: "Rental Platform · Full-Stack",
-    title: "Lejerkit",
-    desc: "A rental marketplace for listing and booking gear, with Stripe handling payments and Supabase powering auth, storage and data.",
-    stack: ["React", "Stripe", "Supabase"],
-    href: "http://lejerkit.dk/",
+    tag: "Sports SaaS · Full-Stack",
+    title: "ScoreWidget",
+    desc: "An embeddable football widget platform — site owners customize live scores, fixtures and standings, then drop them into any site with a simple embed.",
+    stack: ["React", "Node", "Express", "Supabase", "REST API"],
+    href: "https://scorewidget.net/",
+    image: "/scoreweight.jpg",
     accent: "#ff6a4d",
   },
   {
     num: "05",
-    tag: "E-commerce · Personal",
-    title: "Amazon Clone",
-    desc: "A self-built storefront recreating Amazon's shopping flow — product browsing, cart and Stripe checkout — built to sharpen my React fundamentals.",
-    stack: ["React", "Stripe"],
-    href: "https://amazon-clone-ande.vercel.app/",
-    accent: "#7c5cff",
+    tag: "Sports Media · Full-Stack",
+    title: "Fodbold iTV",
+    desc: "A football TV guide for Scandinavian fans in Danish, Swedish and Norwegian — aggregating fixtures and broadcast schedules so they always know where to watch each match.",
+    stack: ["React", "Node", "Express", "Turso", "REST API"],
+    href: "https://fodbolditv.dk/",
+    image: "/fodbolditv.jpg",
+    accent: "#3ad6ff",
   },
 ];
 
@@ -62,7 +66,7 @@ export default function Work() {
         </div>
       </Reveal>
 
-      <Reveal delay={120} className="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <Reveal delay={120} className="flex flex-col gap-12">
         {projects.map((project) => (
           <ProjectCard key={project.num} project={project} />
         ))}

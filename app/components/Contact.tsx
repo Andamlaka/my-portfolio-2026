@@ -3,7 +3,7 @@ import Reveal from "@/app/components/Reveal";
 const links = [
   { label: "GitHub", href: "https://github.com/Andamlaka/" },
   { label: "Upwork", href: "https://www.upwork.com/freelancers/~01c478ba83759a044d" },
-  { label: "Call", href: "tel:+251930202407" },
+  { label: "WhatsApp", href: "https://wa.me/251930202407" },
 ];
 
 export default function Contact() {

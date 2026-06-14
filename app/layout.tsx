@@ -16,9 +16,25 @@ const instrumentSerif = Instrument_Serif({
   style: ['normal', 'italic'],
 });
 
-export const metadata: Metadata ={
-  title: 'Ande — Full Stack Developer',
-  description:'I design and build end-to-end digital products — from the systems that power them.',
+const title = "Andargachew Ewawey — Full-Stack Developer";
+const description =
+  "Full-stack developer building end-to-end web apps, automation, and 3D experiences with React, Node, Python and more.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    siteName: "andar.dev",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

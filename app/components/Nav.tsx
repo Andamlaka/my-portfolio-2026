@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center py-6 px-[5vw] mix-blend-difference">
       <div className="font-bold text-xl tracking-[-0.5px]">
-        andar<span className="text-lime">.</span>dev
+        andeee<span className="text-lime">.</span>dev
       </div>
       <div className="hidden gap-7 text-sm sm:flex">
         <a href="#work" className={linkClass}>Work</a>

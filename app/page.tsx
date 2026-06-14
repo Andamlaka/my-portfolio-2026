@@ -1,4 +1,3 @@
-import Cursor from "@/app/components/Cursor";
 import Aurora from "@/app/components/Aurora";
 import Nav from "@/app/components/Nav";
 import Hero from "@/app/components/Hero";
@@ -12,7 +11,6 @@ import Footer from "@/app/components/Footer";
 export default function Home(){
   return (
     <main>
-      <Cursor />
       <Aurora />
       <div className="grain" aria-hidden="true" />
       <Nav />
