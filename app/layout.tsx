@@ -1,5 +1,5 @@
 import type { Metadata} from 'next';
-import {Space_Grotesk, Instrument_Serif} from 'next/font/google';
+import {Space_Grotesk, Instrument_Serif, Syne} from 'next/font/google';
 import './globals.css';
 
 
@@ -14,6 +14,12 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: ['400'],
   style: ['normal', 'italic'],
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ['700', '800'],
 });
 
 const title = "Andargachew Ewawey — Full-Stack Developer";
@@ -43,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${instrumentSerif.variable} ${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full" suppressHydrationWarning>
         {children}
